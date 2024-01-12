@@ -1,0 +1,5 @@
+num_list = list(int(input()) for _ in range(5))
+mean = sum(num_list) // len(num_list)
+num_list.sort()
+print(mean)
+print(num_list[2])
