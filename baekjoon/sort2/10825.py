@@ -1,5 +1,9 @@
-N = int(input())
+import sys
 
-# input().split()으로 입력을 받고, 그 결과를 map으로 감싼 다음에 tuple로 변환
-input_list = [tuple(map(int, input().split()[1:])) for i in range(N)]
-print(input_list)
+N = int(sys.stdin.readline())
+input_list = [list(sys.stdin.readline().split()) for _ in range(N)]
+
+input_list.sort(key = lambda x: (-int(x[1]), int(x[2]), -int(x[3]), x[0]))
+
+for i in input_list:
+    print(i[0])
