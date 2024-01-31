@@ -7,6 +7,10 @@
         "reveal": "always"
     },
     "tasks": [
+<<<<<<< HEAD
+=======
+        //C++ 컴파일
+>>>>>>> a28734a604b35058bb3fd9944db1a1f582719dd9
         {
             "label": "save and compile for C++",
             "command": "g++",
@@ -16,12 +20,22 @@
                 "${fileDirname}/${fileBasenameNoExtension}"
             ],
             "group": "build",
+<<<<<<< HEAD
+=======
+            //컴파일시 에러를 편집기에 반영
+            //참고:   https://code.visualstudio.com/docs/editor/tasks#_defining-a-problem-matcher
+>>>>>>> a28734a604b35058bb3fd9944db1a1f582719dd9
             "problemMatcher": {
                 "fileLocation": [
                     "relative",
                     "${workspaceRoot}"
                 ],
                 "pattern": {
+<<<<<<< HEAD
+=======
+                    // The regular expression. 
+                    //Example to match: helloWorld.c:5:3: warning: implicit declaration of function 'prinft'
+>>>>>>> a28734a604b35058bb3fd9944db1a1f582719dd9
                     "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning error):\\s+(.*)$",
                     "file": 1,
                     "line": 2,
@@ -31,6 +45,10 @@
                 }
             }
         },
+<<<<<<< HEAD
+=======
+        //C 컴파일
+>>>>>>> a28734a604b35058bb3fd9944db1a1f582719dd9
         {
             "label": "save and compile for C",
             "command": "gcc",
@@ -40,12 +58,22 @@
                 "${fileDirname}/${fileBasenameNoExtension}"
             ],
             "group": "build",
+<<<<<<< HEAD
+=======
+            //컴파일시 에러를 편집기에 반영
+            //참고:   https://code.visualstudio.com/docs/editor/tasks#_defining-a-problem-matcher
+>>>>>>> a28734a604b35058bb3fd9944db1a1f582719dd9
             "problemMatcher": {
                 "fileLocation": [
                     "relative",
                     "${workspaceRoot}"
                 ],
                 "pattern": {
+<<<<<<< HEAD
+=======
+                    // The regular expression. 
+                    //Example to match: helloWorld.c:5:3: warning: implicit declaration of function 'prinft'
+>>>>>>> a28734a604b35058bb3fd9944db1a1f582719dd9
                     "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning error):\\s+(.*)$",
                     "file": 1,
                     "line": 2,
@@ -55,6 +83,10 @@
                 }
             }
         },
+<<<<<<< HEAD
+=======
+        // // 바이너리 실행(Windows)
+>>>>>>> a28734a604b35058bb3fd9944db1a1f582719dd9
         {
             "label": "execute",
             "command": "cmd",
@@ -63,6 +95,7 @@
                 "/C",
                 "${fileDirname}\\${fileBasenameNoExtension}"
             ]
+<<<<<<< HEAD
         },
         {
             "type": "cppbuild",
@@ -131,6 +164,8 @@
             // },
 
             "detail": "컴파일러: C:\\MinGW\\bin\\gcc.exe"
+=======
+>>>>>>> a28734a604b35058bb3fd9944db1a1f582719dd9
         }
     ]
 }
