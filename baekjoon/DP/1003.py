@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 T = int(input())
 dp = [[0, 0] for _ in range(41)]
 dp[0] = [1, 0]
@@ -17,3 +18,20 @@ for _ in range(T):
 # 따로따로 만들어서도 가능
     
 
+=======
+zero = [1, 0, 1]
+one = [0, 1, 1]
+
+def fibonacci(num):
+    length = len(zero)
+    if num >= length:
+        for i in range(length, num+1):
+            zero.append(zero[i-1] + zero[i-2])
+            one.append(one[i-1] + one[i-2])
+    print('{} {}'.format(zero[num], one[num]))
+
+T = int(input())
+    
+for _ in range(T):
+    fibonacci(int(input()))
+>>>>>>> 9b524a8380b029d5f724bc9c39254e4b0fe3e284
