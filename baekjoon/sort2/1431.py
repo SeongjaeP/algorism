@@ -11,6 +11,9 @@ N = int(input())
 # for i in str_list:
 #     print(i)
 
+for _ in range(N):
+
+
 
 str_list = [(s, sum(int(ch) for ch in s if ch.isdigit())) for s in (input() for _ in range(N))]
 str_list.sort(key = lambda x: (len(x[0]), x[1], x[0]))

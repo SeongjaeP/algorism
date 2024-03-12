@@ -1,6 +1,8 @@
 
-N = int(input())
-cost = [list(map(int ,input().split())) for _ in range(N)]
+import sys
+
+N = int(sys.stdin.readline())
+cost = [list(map(int ,sys.stdin.readline().split())) for _ in range(N)]
 
 dp = [[0] * 3 for _ in range(N)]
 dp[0][0] = cost[0][0]
@@ -17,7 +19,7 @@ print(min(dp[N-1][0], dp[N-1][1], dp[N-1][2]))
 # R  G  B  
 # 
 # 3
-# 26 40 83
+# 26 40 83``
 # 49 60 57
 # 13 89 99
 
