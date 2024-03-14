@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+n = int(input())
+
+=======
 t = int(input())
 
 dp = [0] * 11
@@ -15,3 +19,4 @@ for i in range(4, 11):
 for _ in range(t):
     n = int(input())
     print(dp[n])
+>>>>>>> 90bfbcb748efe876e06138552a44766c9e4ce8b4
