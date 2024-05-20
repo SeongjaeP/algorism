@@ -13,8 +13,12 @@ while right < n:
     if num_list[right] - num_list[left] >= m:
         result = min(result, num_list[right] - num_list[left])
         left += 1
+        if left > right:
+            right = left
     else:
         right += 1
+        if right >= n:
+            break
 
 print(result)
             
