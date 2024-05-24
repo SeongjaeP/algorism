@@ -2,14 +2,14 @@ N, M = map(int, input().split())
 num_list = list(map(int, input().split()))
 num_list.sort()
 
-def backtrack(start, combination):
+def backtrack(combination):
     if len(combination) == M:
         print(' '.join(map(str, combination)))
         return
     
-    for i in range(1, N + 1):
+    for i in range(N):
         for j in num_list:
-            backtrack(j, combination + )
+            backtrack(combination, [num_list[i]])
 
 
 backtrack(num_list[0], [])

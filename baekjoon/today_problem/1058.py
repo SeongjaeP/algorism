@@ -30,7 +30,8 @@ adj_matrix = [input().strip() for _ in range(n)]
 print(count_two_friends(n, adj_matrix))
 
 
-
+#####################################################################
+# 플로이드 워셜
 n = int(input())
 frineds = [list(input()) for _ in range(n)]
 

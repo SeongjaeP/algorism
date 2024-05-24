@@ -1,8 +1,6 @@
 N, S = map(int, input().split())
 num_list = list(map(int, input().split()))
 
-num_list.sort()
-
 # 1 2 3 4 5 5 7 8 9 10
 
 left = 0
