@@ -18,7 +18,6 @@ while right <= N:
             current_sum += num_list[right]
         right += 1
           
-
     else:
         current_sum -= num_list[left]
         left += 1

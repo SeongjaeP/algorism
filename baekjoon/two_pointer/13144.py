@@ -12,7 +12,7 @@ cnt = 0
 
 # right가 N에 도달하면 left를 + 1 해서 다시 시작. while 문을 끝내는 지점은 left가 N일 때
 while right < N:
-    if num_list[right] not in unique_set():
+    if num_list[right] not in unique_set:
         unique_set.add(num_list[right])
         cnt += right - left + 1
         right += 1
@@ -22,3 +22,7 @@ while right < N:
         left += 1
 
 print(cnt)
+
+
+
+from collections import deque
