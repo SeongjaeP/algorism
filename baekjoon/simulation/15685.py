@@ -1,10 +1,12 @@
+# 못 풀어서 아래 링크 참고했습니다
+# https://tmdrl5779.tistory.com/146
+
 n = int(input())
 graph = [[0] * 101 for _ in range(101)]
 
-# 방향정의
+
 dx = [0, -1, 0, 1]
 dy = [1, 0, -1, 0]
-
 
 for _ in range(n):
     y, x, d, g = map(int, input().split())
@@ -28,4 +30,3 @@ for i in range(100):
             answer += 1
 
 print(answer)
-
