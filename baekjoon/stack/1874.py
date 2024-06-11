@@ -1,24 +1,28 @@
 n = int(input())
 
-num_list = list(map(int, input().split()) for _ in range(n))
-
-cnt = 1
 stack = []
-tmp = []
+answer = []
+flag = 0
+cur = 1
 
-for i in range(n):
+for _ in range(n):
+    num = int(input())
+    while cur <= num: # 입력한 수를 만날 때 까지 오름차순으로 push
+        stack.append(cur)
+        answer.append('+')
+        cur += 1
+    # 입력한 수를 만나면 while문 탈출. 즉 cur == num일 때 까지 while문을 돌아 스택을 쌓음.
+
+    if stack[-1] == num:
+        stack.pop()
+        answer.append('-')
+    else:
+        print('NO')
+        flag = 1
+        break
+
+if flag == 0:
+    for i in answer:
+        print(i)
     
-# 4 3 6 8 7 5 2 1
-
-# 1 2 3 4 + + + +
-# 4 3 - -
-
-# 1 2 5 6 + + 
-# 4 3 6 -
-
-# 1 2 5 7 8 + +
-# 4 3 6 8 7 - -
-
-# 1 2 5 - - -
-# 4 3 6 8 7 5 2 1
 
