@@ -15,6 +15,26 @@ for i in range(n):
         stack.pop()
     if stack:
         answer[i] = stack[-1] + 1
-    stack.append(i)
+    stack.append(i)  
+
+# i = 0
+# False -> False stack.append(0)
+# i = 1
+# stack = [0] and tower_list[0] < tower[1] = 9 
+# stack.pop() -> stack = []
+# stack = [1] 
+# tower_list[1] = 9 < tower_list[2] = 5: 거짓 
+# stack = [1]
+# answer[2] = 1 + 1
+# stack = [1, 2]
+
+# i = 3
+# while 5 < 7
+# stack.pop() -> stack = [1]
+# answer[3] = 2
+# stack = [1, 3]
+
+# i = 4
+# while 7 < 
 
 print(' '.join(map(str, answer)))
