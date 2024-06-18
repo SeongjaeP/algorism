@@ -1,25 +1,27 @@
+import sys
+input = sys.stdin.readline
+
 N, K = map(int, input().split())
+numbers = [0] * 1000001
+end = 0
+for _ in range(N):
+    g, x = map(int, input().split())
+    numbers[x] = g
+    end = max(end, x)
 
-# N은 얼음 양동이의 개수
-# K는 팔 뻗을 수 있는 길이 
-# x는 위치 g는 얼음 개수 생각하면 편함
+step = 2 * K + 1
+window = sum(numbers[:step])
+answer = window
+
+for i in range(step, end+1):
+    window += numbers[i] - numbers[i-step]
+    answer = max(answer, window)
+print(answer)
 
 
 
-ice_info_list = [tuple(map(int, input().split())) for _ in range(N)]
-
-ice_info_list.sort(key = lambda x: x[1])
-
-# (5,1), (2,2), (4,7), (10,15)
-# 일단 좌표에 대입을 다 하면?
-
-
-left_max = 0
-right_max = 0
-ice_sum_max = 0
-while True:
-    for ice_info in ice_info_list:
-        a_x = ice_info[1]
-        a_g = ice_info[0]
-
-        left_max = a
+# 4 3
+# 4 7
+# 10 15
+# 2 2
+# 5 1

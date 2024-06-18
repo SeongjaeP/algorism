@@ -1,15 +1,14 @@
 T = int(input())
 
-
 for _ in range(T):
     N = int(input())
-    num_list = [0] * N +list(map(int, input().split())) + [0] * N
-    end = 3 * N
-    step = N
-    window = sum(num_list[:step-1])
-    answer = window
-    for i in range(step, end):
-        window += num_list[i] - num_list[i-step]
-        answer = max(answer, window)
+    num_list = list(map(int, input().split()))
     
-    print(answer)
+    current_sum = num_list[0]
+    max_sum = num_list[0]
+    
+    for i in range(1, N):
+        current_sum = max(num_list[i], current_sum + num_list[i])
+        max_sum = max(max_sum, current_sum)
+    
+    print(max_sum)
